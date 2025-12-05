@@ -1,6 +1,16 @@
-.inputRepo{
+.input-repo {
     display: flex;
-    flex-direction: row;
+    min-height: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 16px;
+    gap: 2rem;
+}
+
+.input-data {
+    text-align: center;
+    width: 100%;
+    max-width: 640px;
+    cursor: pointer;
 }

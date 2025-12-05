@@ -1,7 +1,6 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import { IonInput } from '@ionic/react';
+import { IonTextarea, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
+import { IonInput, IonText } from '@ionic/react';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
@@ -13,18 +12,25 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <div className='inputRepo'>
-          <IonInput label="Nombre repositorio" labelPlacement="floating" fill="outline" placeholder="Ingresa nombre repositorio"></IonInput>
-          <IonInput label="Descripcion repositorio" labelPlacement="floating" fill="outline" placeholder="Ingresa nombre repositorio"></IonInput>
+        <div className='input-repo'>
+          <IonInput className="input-data" labelPlacement="floating" placeholder='New repo' value="">
+            <div slot="label">
+              Nombre Repositorio <IonText color="danger">(Required)</IonText>
+            </div>
+          </IonInput>
+          <IonTextarea className="input-data" labelPlacement="floating" placeholder='New description' value="">
+            <div slot="label">
+              Descripcion <IonText color="danger">(Required)</IonText>
+            </div>
+          </IonTextarea>
+
+          <IonButton className="input-data" expand='block'>
+            Guradar
+          </IonButton>
         </div>
 
       </IonContent>
-    </IonPage>
+    </IonPage >
   );
 };
 
