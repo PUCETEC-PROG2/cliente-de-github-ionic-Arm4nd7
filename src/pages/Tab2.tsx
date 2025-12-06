@@ -12,13 +12,18 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Formulario Repos</IonTitle>
+          </IonToolbar>
+        </IonHeader>
         <div className='input-repo'>
-          <IonInput className="input-data" labelPlacement="floating" placeholder='New repo' value="">
+          <IonInput fill='outline' className="input-data" labelPlacement="floating" placeholder='New repo' value="">
             <div slot="label">
               Nombre Repositorio <IonText color="danger">(Required)</IonText>
             </div>
           </IonInput>
-          <IonTextarea className="input-data" labelPlacement="floating" placeholder='New description' value="">
+          <IonTextarea fill='outline' rows={5} className="input-data" labelPlacement="floating" placeholder='New description' value="">
             <div slot="label">
               Descripcion <IonText color="danger">(Required)</IonText>
             </div>
