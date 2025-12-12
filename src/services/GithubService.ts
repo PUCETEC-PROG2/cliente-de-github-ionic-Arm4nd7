@@ -1,20 +1,25 @@
 import axios from "axios";
 import { RepositoryItem } from "../interfaces/RepositoryItem";
-import { language } from "ionicons/icons";
 
 const GITHUB_API_URL = import.meta.env.VITE_GITHUB_API_URL;
 const GITHUB_API_TOKEN = import.meta.env.VITE_GITHUB_API_TOKEN;
+
+/**
+ * 
+ * @returns Obtener repositorios
+ */
 
 export const fetchRepositories = async (): Promise<RepositoryItem[]> => {
   try {
     const response = await axios.get(`${GITHUB_API_URL}/user/repos`, {
       headers: {
-        Authorization: GITHUB_API_TOKEN,
+        Authorization: GITHUB_API_TOKEN
       },
       params: {
         per_page: 100,
         sort: "created",
         direction: "desc",
+        afiliation: "owner"
       },
     });
     const repositories: RepositoryItem[] = response.data.map((repo: any) => ({
@@ -26,7 +31,25 @@ export const fetchRepositories = async (): Promise<RepositoryItem[]> => {
     }));
     return repositories;
   } catch (error) {
-    console.error("Error en la recoleccion de datos de axios");
+    console.error("Error en la recoleccion de datos de axios", error);
     return [];
   }
 };
+
+
+/**
+ * Crear repositorios
+ * @param repo 
+ */
+export const createRepository = async(repo: RepositoryItem): Promise<void> =>{
+  try {
+    const response = await axios.post(`${GITHUB_API_URL}/user/repos`, repo,{
+      headers:{
+        Authorization: GITHUB_API_TOKEN
+      }
+    });
+    console.log("Se creo el repositorio...", response.data)
+  } catch (error) {
+    console.error("Error al crear: ", error)
+  }
+}
