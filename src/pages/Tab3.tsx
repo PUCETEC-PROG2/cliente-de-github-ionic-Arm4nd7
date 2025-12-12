@@ -11,11 +11,6 @@ const Tab3: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Perfil usuario</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <div className='card-container'>
           <IonCard>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />

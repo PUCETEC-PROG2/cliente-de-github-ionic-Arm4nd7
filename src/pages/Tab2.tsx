@@ -12,11 +12,6 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Formulario Repos</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <div className='input-repo'>
           <IonInput fill='outline' className="input-data" labelPlacement="floating" placeholder='New repo' value="">
             <div slot="label">

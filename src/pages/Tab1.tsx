@@ -13,11 +13,6 @@ const Tab1: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Repositorios</IonTitle>
-          </IonToolbar>
-        </IonHeader>
         <IonList>
           <RepoItem name="Repositorio 1" imageUrl="nothing">
           </RepoItem>
