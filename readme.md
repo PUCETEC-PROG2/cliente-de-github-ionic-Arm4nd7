@@ -3,8 +3,8 @@
 
 ## Información del Estudiante
 
-- **Nombre:** [Tu nombre completo aquí]
-- **Carrera:** [Tu carrera]
+- **Nombre:** Armando Estevez
+- **Carrera:** Desarrollo de software
 - **Fecha de inicio:** [Fecha]
 
 ---

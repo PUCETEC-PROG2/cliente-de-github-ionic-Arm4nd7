@@ -41,7 +41,7 @@ const Tab3: React.FC = () => {
         </IonHeader>
         <div className='card-container'>
           <IonCard>
-            <img alt="Silhouette of mountains" src={userInfo.avatar_url} />
+            <img className='img-avatar' alt="Silhouette of mountains" src={userInfo.avatar_url} />
             <IonCardHeader className='card-field'>
               <IonCardTitle>{userInfo.name}</IonCardTitle>
               <IonCardSubtitle>{userInfo.login}</IonCardSubtitle>
