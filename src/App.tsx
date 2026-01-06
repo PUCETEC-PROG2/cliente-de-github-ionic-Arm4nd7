@@ -44,6 +44,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Tab4 from './pages/Tab4';
 
 setupIonicReact();
 
@@ -60,6 +61,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/tab3">
             <Tab3 />
+          </Route>
+          <Route path="/tab4/:owner/:repoName">
+            <Tab4 />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
